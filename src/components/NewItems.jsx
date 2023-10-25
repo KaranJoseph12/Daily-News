@@ -1,7 +1,7 @@
 import React from 'react'
 
 const NewItems = (props) => {
-  const {title,description,imgUrl} = props
+  const {title,description,imgUrl,newsUrl} = props
   return (
     <section className='container mx-auto'>
       <div>
@@ -15,20 +15,14 @@ const NewItems = (props) => {
             </div>
             <div className="p-6">
               <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-                {title}
+                {title}...
               </h5>
               <p className="block font-sans text-base antialiased leading-relaxed text-inherit">
                 {description}
               </p>
             </div>
             <div className="p-6 pt-0">
-              <button
-                className="select-none rounded-lg bg-[#ed4a60] py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-red-500/20 transition-all hover:shadow-lg hover:shadow-red-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button"
-                data-ripple-light="true"
-              >
-                Read More
-              </button>
+            <a href={newsUrl} target='-blank' className="text-white bg-[#ed4a60] hover:bg-red-800 focus:ring-4 focus:ring-blue-300 text-xs rounded-lg px-5 py-2.5 mr-2 mb-2 font-bold uppercase">Read more</a>
             </div>
           </div>
       </div>
