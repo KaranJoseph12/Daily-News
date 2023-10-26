@@ -2,8 +2,8 @@ import React,{useState,useEffect} from 'react'
 import PropTypes from 'prop-types'
 import NewItems from './NewItems'
 
-const News = () => {
-  const url = " https://newsapi.org/v2/top-headlines?country=in&apiKey=3c16c7db096e45d0bd345a6ef08846fb"
+const News = (props) => {
+  const url = ` https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=3c16c7db096e45d0bd345a6ef08846fb`
   const [articles, setArticles] = useState([]);
 
   const updateNews = async() => {
@@ -21,7 +21,7 @@ const News = () => {
   return (
     <main>
       <div>
-            <h1 className='text-center font-bold text-4xl text-slate-500 pb-20'>Top HeadLines</h1>
+            <h1 className='text-center font-bold text-4xl text-slate-500 pb-20'>Top {props.category.replace(/\b\w/g, x => x.toUpperCase())} HeadLines</h1>
             <div className="grid grid-cols-3"  >
                 {articles.map(e => {
                   return (
@@ -41,6 +41,9 @@ const News = () => {
   )
 }
 
-News.propTypes = {}
+News.propTypes = {
+  country:PropTypes.string,
+  category:PropTypes.string,
+}
 
 export default News

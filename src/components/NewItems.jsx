@@ -5,7 +5,7 @@ const NewItems = (props) => {
   return (
     <section className='container mx-auto'>
       <div>
-          <div className="relative flex flex-col text-gray-700 bg-[#cdcec86e] shadow-md w-96 rounded-xl bg-clip-border">
+          <div className="relative flex flex-col text-gray-700 bg-stone-100 shadow-md w-96 rounded-xl bg-clip-border">
             <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
               <img
                 src={imgUrl}
