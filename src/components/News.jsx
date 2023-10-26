@@ -21,16 +21,19 @@ const News = () => {
   return (
     <main>
       <div>
-            <h1 className='text-center font-bold text-4xl text-slate-500'>Top HeadLines</h1>
-            {articles.map(e => {
-              return (
-                <div className="grid grid-cols-3 pt-20" key={e.url} >
-                    <NewItems title={(e.title?e.title.slice(0,60):"Unknown")} description = {(e.description?e.description:"No description")} 
-                    imgUrl={e.urlToImage?e.urlToImage:"https://cdn.wisden.com/wp-content/uploads/2023/10/Copy-of-Lead-image-2023-10-24T115224.063.png"}  newsUrl={e.url}/>
-                </div>
-              )
-            })}
-
+            <h1 className='text-center font-bold text-4xl text-slate-500 pb-20'>Top HeadLines</h1>
+            <div className="grid grid-cols-3"  >
+                {articles.map(e => {
+                  return (
+                  
+                      <div className='pb-16'key={e.url}>
+                          <NewItems title={(e.title?e.title.slice(0,60):"Unknown")} description = {(e.description?e.description.slice(0,120):"No description")} 
+                          imgUrl={e.urlToImage?e.urlToImage:"https://cdn.wisden.com/wp-content/uploads/2023/10/Copy-of-Lead-image-2023-10-24T115224.063.png"}  newsUrl={e.url}/>
+                      </div>
+                    
+                  )
+                  })}
+            </div>
         </div>
     
       
