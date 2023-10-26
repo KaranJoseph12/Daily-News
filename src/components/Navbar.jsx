@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <main className='w-full py-4  border-2 bg-[#ed4a60] border-red-500 '>
-      <nav className='font-montserrat relative flex justify-around items-center font-bold text-white text-lg'>
+      <nav className=" font-montserrat relative flex justify-around items-center font-bold text-white text-lg  ">
       <Link to="/business" className=''>Business</Link>
       <Link to="/entertainment" className='relative left-[-3%]'>Entertainment</Link>
       <Link to="/health" className='relative left-[-7%]'>Health</Link>
